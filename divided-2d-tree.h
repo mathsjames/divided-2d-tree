@@ -21,11 +21,16 @@ struct PointAnd2Distances {
 class D2dTreeNode {
   DataPoint point;
   D2dTreeNode *left,*right;
-public:
+ public:
+  void list(DataPoint* elements);
   void insert(DataPoint newpoint);
   void remove(DataPoint oldpoint);
   void deleteTree();
   KPoints nearestK(DataPoint otherpoint,int k, double maxdist);
   KDistances distanceToNearestK(DataPoint otherpoint, int k, double maxdist);
   PointAnd2Distances nearestAndNextDistance(DataPoint otherpoint, double maxdist);
+};
+
+class D2dTreeRoot : D2dTreeNode {
+  unsigned int size;
 };

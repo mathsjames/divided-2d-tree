@@ -1,5 +1,9 @@
 #include"divided-2d-tree.h"
 
+int testList() {
+  return 0;
+}
+
 int testInsert() {
   return 0;
 }
@@ -25,11 +29,14 @@ int testNearestAndNextDistance() {
 }
 
 int main() {
-  int failures = 0;
-  failures+=testInsert();
-  failures+=testRemove();
-  failures+=testNearestK();
-  failures+=testDistanceToNearestK();
-  failures+=testNearestAndNextDistance();
-  return 0;
+  int failureCount = 0;
+  failureCount+=testSize();
+  failureCount+=testList();
+  failureCount+=testInsert();
+  failureCount+=testRemove();
+  failureCount+=testDeleteTree();
+  failureCount+=testNearestK();
+  failureCount+=testDistanceToNearestK();
+  failureCount+=testNearestAndNextDistance();
+  return failureCount;
 }
