@@ -30,7 +30,6 @@ int testNearestAndNextDistance() {
 
 int main() {
   int failureCount = 0;
-  failureCount+=testSize();
   failureCount+=testList();
   failureCount+=testInsert();
   failureCount+=testRemove();
